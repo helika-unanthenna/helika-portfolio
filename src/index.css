@@ -1,0 +1,131 @@
+@import "tailwindcss";
+/* Hide the default browser tooltip */
+[title] {
+  pointer-events: none; /* Prevents the tooltip from triggering */
+}
+
+.cursor-pointer {
+  pointer-events: auto;
+}
+
+/* Tooltip styles */
+.custom-tooltip {
+  visibility: hidden; /* Hidden by default */
+  position: absolute;
+  bottom: 60%; /* Position above the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 1.0); /* Dark background */
+  color: #000000; /* White text */
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px; /* Slightly larger font size */
+  font-weight: medium;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth fade-in/fade-out */
+  white-space: nowrap;
+}
+
+/* Show tooltip on hover */
+.group:hover .custom-tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* src/index.css */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  outline: none;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Customize Swiper navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  color: rgb(156 163 175) !important; /* text-gray-400 */
+  width: 32px !important; /* Slightly larger size */
+  height: 32px !important; /* Slightly larger size */
+  transition: color 0.3s ease !important; /* Smooth hover effect */
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: rgb(75 85 99) !important; /* text-gray-600 on hover */
+}
+
+/* Adjust arrow icon size */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 1rem !important; /* Slightly larger arrow size */
+  font-weight: bold !important; /* Make arrows bold */
+}
+
+/* Customize Swiper pagination dots */
+.swiper-pagination-bullet {
+  background-color: rgb(156 163 175) !important; /* bg-gray-400 */
+  opacity: 1 !important; /* Fully visible */
+  width: 8px !important; /* Dot size */
+  height: 8px !important; /* Dot size */
+  margin: 0 4px !important; /* Space between dots */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: rgb(75 85 99) !important; /* Active dot color: gray-600 */
+}
+
+/* Full-screen overlay */
+.full-screen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+/* Close button */
+.close-button {
+  position: absolute;
+  top: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  color: #444a54; /* Dark gray color for the symbol */
+  font-size: 1.5rem; /* Slightly smaller for better fit */
+  cursor: pointer;
+  z-index: 1001; /* Ensure it's above the overlay */
+  background: rgba(216, 218, 223, 0.8); /* Light gray background with slight transparency */
+  border: none;
+  padding: 0; /* Remove padding */
+  border-radius: 50%; /* Make it circular */
+  width: 40px; /* Set a fixed width */
+  height: 40px; /* Set a fixed height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for close button */
+.close-button:hover {
+  background: rgba(229, 231, 235, 1); /* Solid light gray on hover */
+}

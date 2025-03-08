@@ -39,15 +39,29 @@ const ProjectModal = ({ isOpen, onRequestClose, project }) => {
         onRequestClose={onRequestClose}
         className="modal"
         overlayClassName="modal-overlay"
+        style={{
+          content: {
+            top: "6rem", // Space below the navbar
+            //bottom: "2rem", // Space at the bottom
+            left: "50%",
+            transform: "translateX(-50%)",
+            width: "90vw",
+            maxWidth: "800px",
+            padding: "0",
+            overflow: "hidden",
+          },
+        }}
       >
-        <div className="bg-white p-4 md:p-8 rounded-lg w-full max-w-[90vw] md:max-w-2xl mx-auto text-gray-600">
-          <button
-            onClick={onRequestClose}
-            className="absolute top-2 right-4 text-gray-400 hover:text-gray-600 text-2xl"
-          >
-            &times;
-          </button>
+        {/* Close Button (Absolute Position inside Modal) */}
+        <button
+          onClick={onRequestClose}
+          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl bg-white rounded-full w-10 h-10 flex items-center justify-center z-50 shadow-lg"
+        >
+          &times;
+        </button>
 
+        {/* Scrollable Content */}
+        <div className="bg-white p-4 md:p-8 rounded-lg w-full h-full text-gray-600 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 ">
           {/* Swiper Slider */}
           <Swiper
             modules={[Navigation, Pagination]}
@@ -71,15 +85,34 @@ const ProjectModal = ({ isOpen, onRequestClose, project }) => {
 
           {/* Project Details */}
           <h2 className="text-2xl md:text-3xl font-bold mb-2 md:mb-4">{project.title}</h2>
-          <p className="text-sm md:text-base text-gray-700 mb-2">{project.description}</p>
-          <p className="text-sm md:text-base text-gray-500 mb-4">{project.details}</p>
+          <div className="flex flex-col md:flex-row md:items-center gap-2">
+  <p className="text-sm md:text-base text-gray-700">{project.description}</p>
+  
+  {project.link && (
+    
+    <div className="flex flex-row items-center gap-2">
+      <p className="text-sm md:text-base text-gray-700"> | </p>
+      <a
+        href={project.link} // Use the project's link
+        target="_blank" // Opens the link in a new tab
+        rel="noopener noreferrer" // Security best practice for external links
+        className="text-sm md:text-base font-medium text-gray-500 hover:text-gray-700 hover:underline"
+      >
+        Link
+      </a>
+    </div>
+  )}
+</div>
+          
+          <p className="text-sm md:text-base text-gray-500 mb-4 text-justify">{project.details}</p>
 
           {/* Display technologies */}
           <div className="mt-2">
-            <p className="text-sm md:text-md font-bold text-gray-500">
+            <p className="text-sm md:text-md font-bold text-gray-500 text-justify">
               {project.technologies.join(" | ")} {/* Join technologies with a pipe */}
             </p>
           </div>
+          
         </div>
       </Modal>
 

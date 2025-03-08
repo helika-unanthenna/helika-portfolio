@@ -49,12 +49,12 @@ const Contact = () => {
           <div className="bg-white text-gray-600 px-6 py-4 rounded-lg border-2 border-gray-200 w-64 flex flex-col items-center justify-center mb-6">
             <i className="bx bx-mail-send text-4xl mb-2 text-gray-400"></i>
             <p className="text-md">Email</p>
-            <p className="text-md font-semibold">myemail@somethingmail.com</p>
+            <p className="text-md font-semibold">h.unanthenna@gmail.com</p>
           </div>
           <div className="bg-white text-gray-600 px-6 py-4 rounded-lg border-2 border-gray-200 w-64 flex flex-col items-center justify-center mb-6">
             <i className="bx bxs-phone-call text-4xl mb-2 text-gray-400"></i>
             <p className="text-md">Phone</p>
-            <p className="text-md font-semibold">+123 456 7890</p>
+            <p className="text-md font-semibold">+94760408873</p>
           </div>
         </div>
         <div className="container mx-auto text-left lg:w-1/2 flex flex-col justify-center items-center">

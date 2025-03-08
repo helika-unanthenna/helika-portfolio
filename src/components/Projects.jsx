@@ -5,46 +5,61 @@ import ProjectModal from "./ProjectModal";
 import movierecommender1 from "../assets/images/project images/movie recommender/movierecommender1.jpg";
 import movierecommender2 from "../assets/images/project images/movie recommender/movierecommender2.jpg";
 import movierecommender3 from "../assets/images/project images/movie recommender/movierecommender3.jpg";
+import movierecommender4 from "../assets/images/project images/movie recommender/movierecommender4.jpg";
 
 import gymmatelogo from "../assets/images/project images/gym mate/gymmatelogo.png";
+
+import ronlogo from "../assets/images/project images/ron/ronlogo.png";
+
+import pawsitivecarelogo from "../assets/images/project images/pawsitivecare/pawsitivecarelogo.jpg";
+import pawsitivecare1 from "../assets/images/project images/pawsitivecare/pawsitivecare1.jpg";
+
 
 const projects = [
   {
     id: 1,
     title: "Movie Recommender",
-    description: "A Machine Learning Project",
-    image: movierecommender1,
-    images: [movierecommender1, movierecommender2, movierecommender3], // Multiple images for the slider
+    description: "Machine Learning Project",
+    image: movierecommender2,
+    images: [movierecommender1, movierecommender2, movierecommender3,movierecommender4], // Multiple images for the slider
     details:
-      "This is a content-based movie recommender. Using Python, Streamlit. Used Bert-Model,Cosine-similarity and many tehnologies in order to get the expected results. Dataset is taken from Kaggle. Hope to further improve the system to give the results based on popularity",
-    technologies: ["Python", "Streamlit", "BERT Model", "Cosine Similarity"],
+     "This is a content-based movie recommender system designed to provide personalized movie suggestions based on user input. Built using Python and Streamlit, the system leverages advanced technologies like BERT embeddings and cosine similarity to deliver accurate and relevant recommendations. The dataset used for this project was sourced from Kaggle, ensuring a robust and diverse collection of movies for analysis. The system also integrates with The Movie Database (TMDb) API to fetch movie posters dynamically, enhancing the user experience.",
+    technologies: ["Python", "Streamlit", "BERT Model", "Cosine Similarity", "Fuzzywuzzy", "TMDb API", "Pandas", "NumPy", "Scikit-learn"],
+    link:"https://drive.google.com/file/d/17fCCWcMKncFy8G8-EAkgcz8IBR2P5Lna/view"
   },
   {
     id: 2,
     title: "GymMate",
-    description: "A Mobile App",
+    description: "Mobile App",
     image: gymmatelogo,
     details:
-      "GymMate is an android mobile app we developed to revolutionaize the traditional paper-base system in GYMs. We provide a user-friendly interface for users to interact with the coaches. Coaches are able to give users personalized meal-plans and workoutplans and users can access them through their user-dashboard. We also allow users to get in touch with their coach through whatsapp via the mobile app.",
-    technologies: ["Android", "Java", "Firebase", "UI/UX Design"],
+      "GymMate is a modern Android mobile app designed to revolutionize the traditional paper-based system in a paticular gym. It provides a user-friendly interface for gym members to interact with their coaches, access personalized meal and workout plans, and communicate directly with their coaches via WhatsApp. Built with React Native for cross-platform compatibility and Supabase for backend functionality, GymMate streamlines gym management and enhances user experience.",
+    technologies: ["Android", "React Native", "TailwindCss", "Supabase"],
+    link:"https://www.linkedin.com/posts/helika-unanthenna_gymmate-mobileappdevelopment-innovation-activity-7286643901698916352-I1hO?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE5pJbQBdAkoNYf2AfqUJ3YtINclXGCv_SM"
+    
   },
   {
     id: 3,
     title: "RON",
-    description: "A Web Application",
-    image: "/src/assets/project images/RON/RONLogo.png",
+    description: "Web Application",
+    image: ronlogo,
 
     details:
-      "RON - Reach Out Now, is a website we made to connect the various student societies in the university. We wanted to create a platform where students can know more about the societies. As societies typically communicate through whatsapp to share information about their activities,events etc,we want to join all the societies together to post on their events and members can sign uo for them through the pages dedicated to paticular society",
-    technologies: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
+    "RON - Reach Out Now is a website designed to connect various student societies within a university. The platform serves as a centralized hub where students can learn more about different societies, stay updated on their activities and events, and sign up for events directly through dedicated society pages. By replacing the traditional WhatsApp-based communication system, RON streamlines information sharing and enhances student engagement.",
+
+
+    technologies: ["HTML", "CSS", "Javascript", "MySQL"],
+    link:""
   },
   {
     id: 4,
     title: "PAWsitive Care",
-    description: "A Mobile App",
-    image: "/src/assets/project images/PAWsitiveCare/PawsitivecareLogo.png",
-    details: "",
+    description: "A Mobile App (Ongoing)",
+    image: pawsitivecarelogo,
+    images: [pawsitivecarelogo,pawsitivecare1],
+    details: "Pawsitive Care is a mobile application designed to support stray and lost animals by helping them find homes and access medical care. The app enables users to create posts about lost or stray animals, engage with posts from other users, and interact with veterinarians offering medical assistance. Built with Flutter for cross-platform compatibility, Pawsitive Care connects the community, providing a platform for animal welfare and fostering collaboration between users and professionals.",
     technologies: ["Flutter", "Dart", "Firebase", "UI/UX Design"],
+    link:""
   },
 ];
 

@@ -14,7 +14,7 @@ const Hero = () => {
         {/* Intro Content (Text + Image) */}
         <div className="flex flex-col lg:flex-row w-full items-center gap-6">
           {/* Photo (Display first on mobile and tablet) */}
-          <div className="w-full lg:w-1/4 flex justify-center items-center order-1 lg:order-2 lg:pb-23">
+          <div className="w-full lg:w-1/4 flex justify-center items-center order-1 lg:order-2 lg:pb-8">
             <img
               src={profilepic}
               alt="Hey"
@@ -23,30 +23,23 @@ const Hero = () => {
           </div>
 
           {/* Text Content (Display below photo on mobile and tablet) */}
-          <div className="w-full lg:w-3/4 flex-grow-0 text-center lg:text-left lg:p-8 order-2 lg:order-1">
+          <div className="w-full lg:w-3/4 flex-grow-0 text-center lg:text-left lg:p-8 lg:pt-20 order-2 lg:order-1">
             <h1 className="font-sans text-3xl md:text-4xl font-bold mb-4">
               Hi, I'm{" "}
               <span className="font-sans text-3xl md:text-4xl relative inline-block text-gray-500">
-                <span>myname yo</span>
+                <span>Helika Unanthenna</span>
               </span>
             </h1>
             <p className="text-md md:text-lg mb-6 text-justify leading-relaxed whitespace-normal break-words">
-              I am a passionate and driven Computer Science undergraduate at the
-              University of [Name], with a strong interest in software
-              development and cutting-edge technologies.
-              <br /> My hands-on experience spans mobile app development, web
-              development, and Python programming, with a particular enthusiasm
-              for Python development.
-              <br /> As a machine learning and AI enthusiast, I am constantly
-              exploring ways to apply these technologies to solve real-world
-              problems.
-              <br />
-              I am currently seeking internship opportunities in areas such as
-              mobile app development, web development, and Python development.
-              If you have openings or projects in these fields, I would love to
-              connect and contribute my skills and enthusiasm to your team. Feel
-              free to reach out to me for collaboration or internship
-              opportunities!
+              I am a Computer Science undergraduate at University of Jaffna, passionate about software development, mobile app
+              development, and web development. I have a strong enthusiasm for
+              Python development and a keen interest in AI and machine learning.<br/>
+              Currently, I am seeking internship opportunities in software
+              development, mobile/web development, Python development, and AI/ML
+              to kick-start my professional journey. I am eager to take on new
+              challenges and opportunities that allow me to learn, grow, and
+              contribute. <br/><br/>Feel free to reach out for collaboration or internship
+              opportunities—let’s connect!
             </p>
 
             {/* Social Media Links */}

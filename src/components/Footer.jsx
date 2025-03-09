@@ -12,7 +12,7 @@ const Footer = () => {
             href="https://github.com/helika-unanthenna/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-500 text-2xl hover:text-3xl transition duration-300"
+            className="text-3xl text-gray-600 hover:text-gray-300 transition duration-300"
           >
             <FaGithub />
           </a>
@@ -20,13 +20,13 @@ const Footer = () => {
             href="https://www.linkedin.com/in/helika-unanthenna/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-500 text-2xl hover:text-3xl transition duration-300"
+            className="text-3xl text-gray-600 hover:text-gray-300 transition duration-300"
           >
             <FaLinkedin />
           </a>
           
         </div>
-        <p className="text-gray-500 font-medium">
+        <p className="text-gray-500 text-sm md:text-lg">
           ©{new Date().getFullYear()} HelikaUnanthenna. All rights reserved.
         </p>
       </div>

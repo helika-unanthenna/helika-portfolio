@@ -89,7 +89,7 @@ const Contact = () => {
             ></textarea>
             <button
               type="submit"
-              className="bg-gray-600 text-white px-6 py-2 rounded-lg hover:text-white hover:text-lg"
+              className="bg-gray-600 text-white text-sm md:text-lg px-6 py-3 rounded-lg hover:bg-gray-300 hover:text-gray-600 hover:font-bold cursor-pointer inline-block"
               disabled={isLoading}
             >
              {isLoading ? "Sending... " : "Send Message "}<i className="bx bxs-send"></i>

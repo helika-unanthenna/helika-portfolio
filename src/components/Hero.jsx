@@ -18,19 +18,19 @@ const Hero = () => {
             <img
               src={profilepic}
               alt="Hey"
-              className="w-48 h-48 md:w-64 md:h-64 rounded-full shadow-lg "
+              className="w-36 h-36 md:w-64 md:h-64 rounded-full shadow-lg "
             />
           </div>
 
           {/* Text Content (Display below photo on mobile and tablet) */}
           <div className="w-full lg:w-3/4 flex-grow-0 text-center lg:text-left lg:p-8 lg:pt-20 order-2 lg:order-1">
-            <h1 className="font-sans text-3xl md:text-4xl font-bold mb-4">
+            <h1 className="font-sans text-2xl md:text-4xl font-bold mb-4">
               Hi, I'm{" "}
-              <span className="font-sans text-3xl md:text-4xl relative inline-block text-gray-500">
+              <span className="font-sans text-2xl md:text-4xl relative inline-block text-gray-500">
                 <span>Helika Unanthenna</span>
               </span>
             </h1>
-            <p className="text-md md:text-lg mb-6 text-justify leading-relaxed whitespace-normal break-words">
+            <p className="text-sm md:text-lg mb-6 text-justify leading-relaxed whitespace-normal break-words">
               I am a Computer Science undergraduate at University of Jaffna, passionate about software development, mobile app
               development, and web development. I have a strong enthusiasm for
               Python development and a keen interest in AI and machine learning.<br/>
@@ -69,7 +69,7 @@ const Hero = () => {
                   to="projects"
                   smooth={true}
                   duration={500}
-                  className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-300 hover:text-gray-600 hover:font-bold cursor-pointer inline-block"
+                  className="bg-gray-600 text-white text-sm md:text-lg px-6 py-3 rounded-lg hover:bg-gray-300 hover:text-gray-600 hover:font-bold cursor-pointer inline-block"
                 >
                   View My Work
                 </Link>
@@ -78,7 +78,7 @@ const Hero = () => {
                 <a
                   href={cv} // Replace with the actual path to your CV file
                   download="Helika Unanthenna CV.pdf" // Specify the downloaded file name
-                  className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-300 hover:text-gray-600 hover:font-bold cursor-pointer inline-block"
+                  className="bg-gray-600 text-white text-sm md:text-lg px-6 py-3 rounded-lg hover:bg-gray-300 hover:text-gray-600 hover:font-bold cursor-pointer inline-block"
                 >
                   Download My CV
                 </a>

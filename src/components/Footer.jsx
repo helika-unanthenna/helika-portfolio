@@ -1,6 +1,6 @@
 // src/components/Footer.jsx
 import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa"; // Example social icons
+import { FaGithub, FaLinkedin } from "react-icons/fa"; 
 
 const Footer = () => {
   return (
@@ -26,7 +26,7 @@ const Footer = () => {
           </a>
           
         </div>
-        <p className="text-gray-500 text-sm md:text-lg">
+        <p className="text-gray-500 text-sm md:text-md">
           ©{new Date().getFullYear()} HelikaUnanthenna. All rights reserved.
         </p>
       </div>

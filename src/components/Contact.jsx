@@ -4,9 +4,9 @@ import CustomAlert from "./CustomAlert";
 
 const Contact = () => {
   const form = useRef();
-  const [isLoading, setIsLoading] = useState(false); // Loading state
-  const [showAlert, setShowAlert] = useState(false); // Alert visibility state
-  const [alertMessage, setAlertMessage] = useState(""); // Alert message
+  const [isLoading, setIsLoading] = useState(false); 
+  const [showAlert, setShowAlert] = useState(false); 
+  const [alertMessage, setAlertMessage] = useState(""); 
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -14,36 +14,36 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID, // Access Service ID from .env
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID, // Access Template ID from .env
+        import.meta.env.VITE_EMAILJS_SERVICE_ID, 
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID, 
         form.current,
-        import.meta.env.VITE_EMAILJS_USER_ID // Access User ID from .env
+        import.meta.env.VITE_EMAILJS_USER_ID 
       )
       .then(
         (result) => {
           console.log(result.text);
-          setAlertMessage("Message sent successfully!"); // Set success message
-          setShowAlert(true); // Show the alert
+          setAlertMessage("Message sent successfully!");
+          setShowAlert(true); 
 
           if (form.current) {
-            form.current.reset(); // Reset the form
+            form.current.reset(); 
           }
         },
         (error) => {
           console.log(error.text);
-          setAlertMessage("Failed to send the message. Please try again."); // Set error message
-          setShowAlert(true); // Show the alert
+          setAlertMessage("Failed to send the message. Please try again."); 
+          setShowAlert(true); 
         }
       
       )
       .finally(() => {
-        setIsLoading(false); // Reset loading state
+        setIsLoading(false); 
       });
   };
 
   return (
-    <section id="contact" className="py-16 items-center text-gray-600">
-      <h2 className="text-4xl font-bold mb-8 text-center">Contact Me</h2>
+    <section id="contact" className="py-6 md:py-12 items-center text-gray-600">
+      <h2 className="text-xl md:text-3xl font-bold mb-8 text-center">CONTACT ME</h2>
       <div className="container w-full flex flex-col lg:flex-row px-6 lg:px-80">
         <div className="container lg:w-1/2 justify-start items-center flex flex-col">
           <div className="bg-white text-gray-600 px-6 py-4 rounded-lg border-2 border-gray-200 w-64 flex flex-col items-center justify-center mb-6">
@@ -65,7 +65,7 @@ const Contact = () => {
           >
             <input
               type="text"
-              name="name" // Required for EmailJS
+              name="name" 
               placeholder="Your Name"
               className="w-80 p-3 mb-4 bg-white rounded-lg block border-2 border-gray-200 focus:border-gray-300 focus:outline-none"
               required
@@ -73,14 +73,14 @@ const Contact = () => {
             />
             <input
               type="email"
-              name="email" // Required for EmailJS
+              name="email" 
               placeholder="Your Email"
               className="w-80 p-3 mb-4 bg-white rounded-lg block border-2 border-gray-200 focus:border-gray-300 focus:outline-none"
               required
               disabled={isLoading}
             />
             <textarea
-              name="message" // Required for EmailJS
+              name="message" 
               placeholder="Your Message"
               rows="5"
               className="w-80 p-3 mb-4 bg-white rounded-lg resize-none block border-2 border-gray-200 focus:border-gray-300 focus:outline-none"
@@ -89,7 +89,7 @@ const Contact = () => {
             ></textarea>
             <button
               type="submit"
-              className="bg-gray-600 text-white text-sm md:text-lg px-6 py-3 rounded-lg hover:bg-gray-300 hover:text-gray-600 hover:font-bold cursor-pointer inline-block"
+              className="bg-gray-600 text-white text-sm md:text-md px-6 py-3 rounded-lg hover:bg-gray-300 hover:text-gray-600 hover:font-bold cursor-pointer inline-block"
               disabled={isLoading}
             >
              {isLoading ? "Sending... " : "Send Message "}<i className="bx bxs-send"></i>
@@ -101,7 +101,7 @@ const Contact = () => {
       {showAlert && (
         <CustomAlert
           message={alertMessage}
-          onClose={() => setShowAlert(false)} // Close the alert
+          onClose={() => setShowAlert(false)} 
         />
       )}
     </section>

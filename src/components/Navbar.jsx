@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-scroll"; // For smooth scrolling
-import { FaUser, FaCode, FaProjectDiagram, FaAddressBook, FaDownload } from "react-icons/fa"; // Import your icons
+import { Link } from "react-scroll"; 
+import { FaUser, FaCode, FaProjectDiagram, FaAddressBook, FaDownload } from "react-icons/fa"; 
 import './../index.css';
 import cv from '../assets/cv/Helika Unanthenna CV.pdf'
 
@@ -8,12 +8,12 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 w-full bg-white text-gray-800 p-2 md:p-4 z-50 shadow-sm">
       <div className="container mx-auto flex justify-between items-center">
-        {/* Logo */}
+        
         <div className="text-xl font-bold text-gray-600">Portfolio</div>
 
-        {/* Menu Links (Using Icons for Small Screens) */}
+       
         <ul className="flex space-x-4 sm:space-x-8">
-          {/* Display the text-based links on larger screens */}
+          
           <li className="hidden lg:block">
             <Link
               to="about"
@@ -56,7 +56,7 @@ const Navbar = () => {
           </li>
           <li className="hidden lg:block">
             <a
-            href={cv}// Replace with the actual path to your CV file
+            href={cv}
             download="Helika Unanthenna CV.pdf" 
               className="cursor-pointer hover:text-gray-600 hover:font-bold hover:text-lg"
             >
@@ -64,7 +64,7 @@ const Navbar = () => {
             </a>
           </li>
 
-          {/* Display Icons on Small Screens with Custom Tooltips */}
+          
           <li className="lg:hidden relative group">
             <Link
               to="about"
@@ -123,7 +123,7 @@ const Navbar = () => {
           </li>
           <li className="lg:hidden relative group">
             <a
-              href={cv} // Replace with the actual path to your CV file
+              href={cv} 
               download="Helika Unanthenna CV.pdf" 
               className="cursor-pointer text-base text-gray-400 hover:text-gray-600 duration-300"
               title="DownloadCV"

@@ -1,14 +1,14 @@
 import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa"; // Import icons
-import { Link } from "react-scroll"; // For smooth scrolling
-import profilepic from "../assets/images/profilepic.jpg"; // Import your photo
-import cv from "../assets/cv/Helika Unanthenna CV.pdf"; // Import the CV file
+import { FaGithub, FaLinkedin } from "react-icons/fa"; 
+import { Link } from "react-scroll"; 
+import profilepic from "../assets/images/profilepic.jpg"; 
+import cv from "../assets/cv/Helika Unanthenna CV.pdf";
 
 const Hero = () => {
   return (
     <section
       id="about"
-      className="min-h-[calc(100vh-4rem)] flex flex-col items-center text-gray-600 w-full overflow-hidden mt-16"
+      className="min-h-[calc(100vh-4rem)] flex flex-col items-center text-gray-600 w-full overflow-hidden mt-12"
     >
       <div className="container flex flex-col w-full justify-center items-center px-6 lg:px-40 gap-6">
         {/* Intro Content (Text + Image) */}
@@ -69,16 +69,16 @@ const Hero = () => {
                   to="projects"
                   smooth={true}
                   duration={500}
-                  className="bg-gray-600 text-white text-sm md:text-lg px-6 py-3 rounded-lg hover:bg-gray-300 hover:text-gray-600 hover:font-bold cursor-pointer inline-block"
+                  className="bg-gray-600 text-white text-sm md:text-md px-6 py-3 rounded-lg hover:bg-gray-300 hover:text-gray-600 hover:font-bold cursor-pointer inline-block"
                 >
                   View My Work
                 </Link>
               </div>
               <div>
                 <a
-                  href={cv} // Replace with the actual path to your CV file
-                  download="Helika Unanthenna CV.pdf" // Specify the downloaded file name
-                  className="bg-gray-600 text-white text-sm md:text-lg px-6 py-3 rounded-lg hover:bg-gray-300 hover:text-gray-600 hover:font-bold cursor-pointer inline-block"
+                  href={cv} 
+                  download="Helika Unanthenna CV.pdf" 
+                  className="bg-gray-600 text-white text-sm md:text-md px-6 py-3 rounded-lg hover:bg-gray-300 hover:text-gray-600 hover:font-bold cursor-pointer inline-block"
                 >
                   Download My CV
                 </a>
@@ -88,7 +88,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Scroll */}
       <div className="hidden md:flex ">
         <div className="animate-bounce absolute bottom-8 left-48 flex flex-row items-center">
           <div>
@@ -97,7 +97,7 @@ const Hero = () => {
 
           <div className="">
             <i className="bx bx-mouse text-2xl text-gray-600 "></i>{" "}
-            {/* Boxicons mouse icon */}
+            
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 /* Hide the default browser tooltip */
 [title] {
-  pointer-events: none; /* Prevents the tooltip from triggering */
+  pointer-events: none; 
 }
 
 .cursor-pointer {
@@ -10,19 +10,19 @@
 
 /* Tooltip styles */
 .custom-tooltip {
-  visibility: hidden; /* Hidden by default */
+  visibility: hidden; 
   position: absolute;
-  bottom: 60%; /* Position above the icon */
+  bottom: 60%; 
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 1.0); /* Dark background */
-  color: #000000; /* White text */
+  background-color: rgba(255, 255, 255, 1.0); 
+  color: #000000; 
   padding: 5px 10px;
   border-radius: 5px;
-  font-size: 14px; /* Slightly larger font size */
+  font-size: 14px; 
   font-weight: medium;
   opacity: 0;
-  transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth fade-in/fade-out */
+  transition: opacity 0.3s ease, visibility 0.3s ease; 
   white-space: nowrap;
 }
 
@@ -59,35 +59,35 @@
 /* Customize Swiper navigation buttons */
 .swiper-button-next,
 .swiper-button-prev {
-  color: rgb(156 163 175) !important; /* text-gray-400 */
-  width: 32px !important; /* Slightly larger size */
-  height: 32px !important; /* Slightly larger size */
-  transition: color 0.3s ease !important; /* Smooth hover effect */
+  color: rgb(156 163 175) !important; 
+  width: 32px !important; 
+  height: 32px !important; 
+  transition: color 0.3s ease !important; 
 }
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  color: rgb(75 85 99) !important; /* text-gray-600 on hover */
+  color: rgb(75 85 99) !important; 
 }
 
 /* Adjust arrow icon size */
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  font-size: 1rem !important; /* Slightly larger arrow size */
-  font-weight: bold !important; /* Make arrows bold */
+  font-size: 1rem !important; 
+  font-weight: bold !important; 
 }
 
 /* Customize Swiper pagination dots */
 .swiper-pagination-bullet {
-  background-color: rgb(156 163 175) !important; /* bg-gray-400 */
-  opacity: 1 !important; /* Fully visible */
-  width: 8px !important; /* Dot size */
-  height: 8px !important; /* Dot size */
-  margin: 0 4px !important; /* Space between dots */
+  background-color: rgb(156 163 175) !important; 
+  opacity: 1 !important; 
+  width: 8px !important; 
+  height: 8px !important; 
+  margin: 0 4px !important; 
 }
 
 .swiper-pagination-bullet-active {
-  background-color: rgb(75 85 99) !important; /* Active dot color: gray-600 */
+  background-color: rgb(75 85 99) !important; 
 }
 
 /* Full-screen overlay */
@@ -101,46 +101,46 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000; /* Ensure it's above other elements */
+  z-index: 1000;
 }
 
 /* Close button */
 .close-button {
   position: absolute;
-  top: 20px; /* Adjust as needed */
-  right: 20px; /* Adjust as needed */
-  color: #444a54; /* Dark gray color for the symbol */
-  font-size: 1.5rem; /* Slightly smaller for better fit */
+  top: 20px; 
+  right: 20px; 
+  color: #444a54; 
+  font-size: 1.5rem; 
   cursor: pointer;
-  z-index: 1001; /* Ensure it's above the overlay */
-  background: rgba(216, 218, 223, 0.8); /* Light gray background with slight transparency */
+  z-index: 1001; 
+  background: rgba(216, 218, 223, 0.8); 
   border: none;
-  padding: 0; /* Remove padding */
-  border-radius: 50%; /* Make it circular */
-  width: 40px; /* Set a fixed width */
-  height: 40px; /* Set a fixed height */
+  padding: 0; 
+  border-radius: 50%; 
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.3s ease; /* Smooth hover effect */
+  transition: background-color 0.3s ease; 
 }
 
 /* Hover effect for close button */
 .close-button:hover {
-  background: rgba(229, 231, 235, 1); /* Solid light gray on hover */
+  background: rgba(229, 231, 235, 1); 
 }
 
 /* Custom Scrollbar Styling */
 .scrollbar-thin::-webkit-scrollbar {
-  width: 8px; /* Thin scrollbar */
+  width: 8px; 
 }
 
 .scrollbar-thin::-webkit-scrollbar-thumb {
-  background-color: #D1D5DB; /* gray-400 */
+  background-color: #D1D5DB; 
   border-radius: 4px;
 }
 
 .scrollbar-thin::-webkit-scrollbar-track {
-  background-color: #f3f4f6; /* gray-100 */
+  background-color: #f3f4f6; 
   border-radius: 4px;
 }

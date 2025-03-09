@@ -7,25 +7,25 @@ import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import "../index.css";
 
-// Set the root element for accessibility (required by react-modal)
+
 Modal.setAppElement("#root");
 
 const ProjectModal = ({ isOpen, onRequestClose, project }) => {
-  const [isFullScreen, setIsFullScreen] = useState(false); // State for full-screen mode
-  const [selectedImage, setSelectedImage] = useState(null); // State for selected image in full-screen
+  const [isFullScreen, setIsFullScreen] = useState(false); 
+  const [selectedImage, setSelectedImage] = useState(null); 
 
-  if (!project) return null; // Return null if no project is selected
+  if (!project) return null; 
 
-  // Use the `images` array for the slider
-  const images = project.images || [project.image]; // Fallback to single image if no array is provided
+  
+  const images = project.images || [project.image]; 
 
-  // Handle image click to open full-screen view
+  
   const handleImageClick = (image) => {
     setSelectedImage(image);
     setIsFullScreen(true);
   };
 
-  // Close full-screen view
+  
   const closeFullScreen = () => {
     setIsFullScreen(false);
     setSelectedImage(null);
@@ -41,8 +41,8 @@ const ProjectModal = ({ isOpen, onRequestClose, project }) => {
         overlayClassName="modal-overlay"
         style={{
           content: {
-            top: "6rem", // Space below the navbar
-            //bottom: "2rem", // Space at the bottom
+            top: "4rem", // Space below the navbar
+            //bottom: "2rem", 
             left: "50%",
             transform: "translateX(-50%)",
             width: "90vw",
@@ -52,7 +52,7 @@ const ProjectModal = ({ isOpen, onRequestClose, project }) => {
           },
         }}
       >
-        {/* Close Button (Absolute Position inside Modal) */}
+        {/* Close Button */}
         <button
           onClick={onRequestClose}
           className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl bg-white rounded-full w-10 h-10 flex items-center justify-center z-50 shadow-lg"
@@ -77,42 +77,47 @@ const ProjectModal = ({ isOpen, onRequestClose, project }) => {
                   src={image}
                   alt={`${project.title} - Image ${index + 1}`}
                   className="w-full h-48 md:h-64 object-contain rounded-lg cursor-pointer"
-                  onClick={() => handleImageClick(image)} // Open full-screen on click
+                  onClick={() => handleImageClick(image)}
                 />
               </SwiperSlide>
             ))}
           </Swiper>
 
           {/* Project Details */}
-          <h2 className="text-2xl md:text-3xl font-bold mb-2 md:mb-4">{project.title}</h2>
-          <div className="flex flex-col md:flex-row md:items-center gap-2">
-  <p className="text-sm md:text-base text-gray-700">{project.description}</p>
-  
-  {project.link && (
-    
-    <div className="flex flex-row items-center gap-2">
-      <p className="text-sm md:text-base text-gray-700"> | </p>
-      <a
-        href={project.link} // Use the project's link
-        target="_blank" // Opens the link in a new tab
-        rel="noopener noreferrer" // Security best practice for external links
-        className="text-sm md:text-base font-medium text-gray-500 hover:text-gray-700 hover:underline"
-      >
-        Link
-      </a>
-    </div>
-  )}
-</div>
-          
-          <p className="text-sm md:text-base text-gray-500 mb-4 text-justify">{project.details}</p>
+          <h2 className="text-2xl md:text-3xl font-bold mb-2 md:mb-4">
+            {project.title}
+          </h2>
+          <div className="flex flex-row md:flex-row md:items-center gap-2">
+            <p className="text-sm md:text-base text-gray-700">
+              {project.description}
+            </p>
+
+            {project.link && (
+              <div className="flex flex-row items-center gap-2">
+                <p className="text-sm md:text-base text-gray-700"> | </p>
+                <a
+                  href={project.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-sm md:text-base font-medium text-gray-500 hover:text-gray-700 hover:underline"
+                >
+                  Link
+                </a>
+              </div>
+            )}
+          </div>
+
+          <p className="text-sm md:text-base text-gray-500 mb-4 text-justify">
+            {project.details}
+          </p>
 
           {/* Display technologies */}
           <div className="mt-2">
             <p className="text-sm md:text-md font-bold text-gray-500 text-justify">
-              {project.technologies.join(" | ")} {/* Join technologies with a pipe */}
+              {project.technologies.join(" | ")}{" "}
+              
             </p>
           </div>
-          
         </div>
       </Modal>
 
@@ -134,7 +139,7 @@ const ProjectModal = ({ isOpen, onRequestClose, project }) => {
             spaceBetween={10}
             slidesPerView={1}
             className="w-full h-full"
-            initialSlide={images.indexOf(selectedImage)} // Start from the selected image
+            initialSlide={images.indexOf(selectedImage)} 
           >
             {images.map((image, index) => (
               <SwiperSlide key={index}>

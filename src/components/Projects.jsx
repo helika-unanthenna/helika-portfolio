@@ -21,7 +21,7 @@ const projects = [
     title: "Movie Recommender",
     description: "Machine Learning Project",
     image: movierecommender2,
-    images: [movierecommender1, movierecommender2, movierecommender3,movierecommender4], // Multiple images for the slider
+    images: [movierecommender1, movierecommender2, movierecommender3,movierecommender4], //for the slider
     details:
      "This is a content-based movie recommender system designed to provide personalized movie suggestions based on user input. Built using Python and Streamlit, the system leverages advanced technologies like BERT embeddings and cosine similarity to deliver accurate and relevant recommendations. The dataset used for this project was sourced from Kaggle, ensuring a robust and diverse collection of movies for analysis. The system also integrates with The Movie Database (TMDb) API to fetch movie posters dynamically, enhancing the user experience.",
     technologies: ["Python", "Streamlit", "BERT Model", "Cosine Similarity", "Fuzzywuzzy", "TMDb API", "Pandas", "NumPy", "Scikit-learn"],
@@ -78,9 +78,9 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-16 text-gray-600 w-full">
+    <section id="projects" className="py-6 md:py-12 text-gray-600 w-full">
       <div className="container w-full px-6 lg:px-40">
-        <h2 className="text-4xl font-bold text-center mb-12">My Projects</h2>
+        <h2 className="text-xl md:text-3xl font-bold text-center mb-6 md:mb-12">PROJECTS</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {projects.map((project) => (
             <div
@@ -102,14 +102,14 @@ const Projects = () => {
               <div className="mt-2">
                 <p className="text-md font-bold text-gray-500">
                   {project.technologies.join(" | ")}{" "}
-                  {/* Join technologies with a pipe */}
+                  
                 </p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Render the modal */}
+        {/* Render modal */}
         <ProjectModal
           isOpen={isModalOpen}
           onRequestClose={closeModal}
